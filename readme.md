@@ -41,4 +41,14 @@ Se cubren todos los criterios de aceptación, incluyendo controles de acceso, vi
 ### **1. Pre-requisitos**
 - Node.js >= 18
 - Chrome instalado
-- Instalar dependencias:
+- Instalar dependencias: npm install
+- Instalar Allure globalmente: npm install -g allure-commandline
+
+
+### **2. Ejecutar las pruebas**
+npm test (el cual ya genera el reporte Allure y al finalizar los tests abre automaticamente a traves de este comando: allure open)
+
+## 📝 **Notas**
+- Todos los casos de prueba incluyen **capturas de pantalla** y se documentan en el reporte Allure.
+- Se reporta bug encontrado sobre el campo **Author** vacío.
+
