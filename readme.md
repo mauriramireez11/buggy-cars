@@ -41,9 +41,17 @@ Se cubren todos los criterios de aceptación, incluyendo controles de acceso, vi
 ### **1. Pre-requisitos**
 - Node.js >= 18
 - Chrome instalado
-- Instalar dependencias: npm install
+- Instalar dependencias: npm install (en el caso de tener inconvenientes de permisos para ejecutar npm install, abrir powershell como administrador y ejecutar lo siguiente: Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+y luego volver a ejecutar el npm install)
+
 - Instalar Allure globalmente: npm install -g allure-commandline
 
+## ⚠️ Requisito para Reporte Allure
+
+- Asegúrate de tener **Java 8 o superior instalado**.
+- Verifica que el comando `java` funcione en tu terminal (`java -version`).
+- Si recibes el error `JAVA_HOME is not set...`, instala Java y reinicia la terminal.
+- Descarga Java desde [AdoptOpenJDK](https://adoptopenjdk.net/) o [Oracle](https://www.oracle.com/java/technologies/downloads/).
 
 ### **2. Ejecutar las pruebas**
 npm test (el cual ya genera el reporte Allure y al finalizar los tests abre automaticamente a traves de este comando: allure open)
