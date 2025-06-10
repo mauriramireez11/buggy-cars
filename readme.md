@@ -1,0 +1,44 @@
+# Pruebas Automatizadas - Votación y Comentarios de Autos 🚗
+
+## Proyecto técnico - HU_1 (WebdriverIO + Allure)
+
+**Página bajo prueba:**  
+https://buggy.justtestit.org/
+
+**Autor:** Mauricio Ramírez  
+**Fecha:** 10 de Junio 2025
+
+---
+
+## 📌 **Descripción**
+Automatización de pruebas funcionales para validar la historia de usuario:  
+**"Como usuario autenticado necesito votar un auto y dejar un comentario para el auto seleccionado."**
+
+Se cubren todos los criterios de aceptación, incluyendo controles de acceso, visibilidad de elementos, y visualización de información principal.
+
+---
+
+## 🧪 **Casos de Prueba**
+
+| Caso | Nombre | Tipo      | Descripción Breve                                                          |
+|------|--------|-----------|----------------------------------------------------------------------------|
+| CP1  | Votar auto autenticado          | Positivo | Votar un auto con usuario autenticado, verifica incremento de votos |
+| CP2  | No mostrar opción de votar sin sesión | Negativo | No permite votar/comentar sin sesión; muestra mensaje alternativo      |
+| CP3  | Dejar un comentario autenticado | Positivo | Comentar y votar autenticado, verifica aparición del comentario y autor |
+| CP4  | Visualización de tabla de comentarios | Visualización | La tabla muestra columnas “Date”, “Author”, “Comment”                   |
+| CP5  | Visualización de descripción, especificación y votos | Visualización | Se muestran descripción, specs y votos del auto                         |
+| CP6  | Intentar comentar sin sesión    | Negativo | No permite dejar comentarios sin login; muestra mensaje alternativo     |
+
+---
+
+## 🚩 **Hallazgos**
+- **BUG:** El campo “Author” en los comentarios queda vacío aun estando autenticado. Se reporta con evidencia en Allure.
+
+---
+
+## 🚀 **Cómo Ejecutar**
+
+### **1. Pre-requisitos**
+- Node.js >= 18
+- Chrome instalado
+- Instalar dependencias:
